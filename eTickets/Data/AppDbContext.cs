@@ -1,4 +1,5 @@
-﻿using eTickets.Models;
+﻿using eTickets.Data.Enums;
+using eTickets.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace eTickets.Data
@@ -11,6 +12,7 @@ namespace eTickets.Data
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<MovieCategory>().HasNoKey();
             modelBuilder.Entity<Actor_Movie>().HasKey(am => new
             {
                 am.ActorId,

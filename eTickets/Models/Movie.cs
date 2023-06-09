@@ -14,6 +14,7 @@ namespace eTickets.Models
         public string ImageURL { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
+        [NotMapped]
         public MovieCategory MovieCategory { get; set; }
         //Relationships
 
